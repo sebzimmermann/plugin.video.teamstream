@@ -231,24 +231,14 @@ def getStreamparams(force=False):
 		else:
 			return False
 
-def getLink(url=""):
-	flag = False
-	
-	if url == "":
-		url = URL_BASE + "forum.php"
-		flag = True
-	
+def getLink():
+	url = URL_BASE + "forum.php"	
 	html = fetchHttp( url, post=False)
 	html = BeautifulSoup( html)
 	for link in html.findAll("a"):
 		cmp = link.text
-		if cmp == "TS Stream Box (SD+HD)":
-			href=link["href"]
-			if "newpost" not in href:
-				if flag:
-					return getLink(URL_BASE + href)
-				else:
-					return href
+		if cmp == "TS  Stream  -  Box":
+			return link["href"]
 
 def getChannelListEPG():
 	channel_list = []

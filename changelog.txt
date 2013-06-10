@@ -1,3 +1,7 @@
+﻿Version 0.4.1 - 06/10/2013
+  * added new streams
+  * minor fixes
+
 version 0.4.0 - 05/12/2013
   * lxml komplett ersetzt durch BeautifulSoup:
     - dadurch vorallem auf RPi leider deutlich langsamer

@@ -237,7 +237,7 @@ def getLink():
 	html = BeautifulSoup( html)
 	for link in html.findAll("a"):
 		cmp = link.text
-		if cmp == "TS  Stream  -  Box":
+		if cmp == "TS  Stream  -  Box" or cmp == "TS Stream  Box":
 			return link["href"]
 
 def getChannelListEPG():

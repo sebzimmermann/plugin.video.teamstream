@@ -21,35 +21,35 @@
 
 		<item event_id="4">
 			<title>History HD</title>
-			<epg>History HD</epg>
+			<epg>History</epg>
 			<file>pappkamerad4hd</file>
 			<image>04.png</image>
 		 </item>
 
 		<item event_id="5">
 			<title>Discovery HD</title>
-			<epg>Discovery HD</epg>
+			<epg>Discovery Channel</epg>
 			<file>pappkamerad5hd</file>
 			<image>05.png</image>
 		 </item>
 
 		<item event_id="6">
 			<title>Nat Geo HD</title>
-			<epg>National Geographic Channel HD</epg>
+			<epg>National Geographic Channel</epg>
 			<file>pappkamerad6hd</file>
 			<image>06.png</image>
 		</item>
 
 		<item event_id="7">
 			<title>Sky Cinema HD</title>
-			<epg>Sky Cinema HD</epg>
+			<epg>Sky Cinema</epg>
 			<file>pappkamerad7hd</file>
 			<image>07.png</image>
 		</item>
 
 		<item event_id="8">
 			<title>ESPN America HD</title>
-			<epg>ESPN America HD</epg>
+			<epg>ESPN America</epg>
 			<file>pappkamerad8hd</file>
 			<image>08.png</image>
 		</item>
@@ -63,7 +63,7 @@
 
 		<item event_id="10">
 			<title>Sky Action HD</title>
-			<epg>Sky Action HD</epg>
+			<epg>Sky Action</epg>
 			<file>streamer9hd</file>
 			<image>10.png</image>
 		 </item>
@@ -91,7 +91,7 @@
 
 		<item event_id="14">
 			<title>Sky Hits HD</title>
-			<epg>Sky Hits HD</epg>
+			<epg>Sky Hits</epg>
 			<file>peppi3hd</file>
 			<image>14.png</image>
 		</item>
@@ -110,25 +110,25 @@
 		</item>
 		<item event_id="17">
 			<title>FOX HD</title>
-			<epg>FOX HD</epg>
+			<epg>FOX</epg>
 			<file>peppi6hd</file>
 			<image>17.png</image>
 		</item>
 		<item event_id="18">
 			<title>TNT Serie HD</title>
-			<epg>TNT Serie HD</epg>
+			<epg>TNT Serie</epg>
 			<file>peppi7hd</file>
 			<image>18.png</image>
 		</item>
 		<item event_id="19">
 			<title>13th Street HD</title>
-			<epg>13TH STREET Universal HD</epg>
+			<epg>13TH STREET Universal</epg>
 			<file>peppi8hd</file>
 			<image>19.png</image>
 		</item>
 		<item event_id="20">
 			<title>Sport 1+ HD</title>
-			<epg>SPORT1+ HD</epg>
+			<epg>SPORT1+</epg>
 			<file>peppi9hd</file>
 			<image>20.png</image>
 		</item>
@@ -151,10 +151,40 @@
 			<image>23.png</image>
 		</item>
 		<item event_id="24">
+			<title>Eurosport 2</title>
+			<epg>Eurosport 2</epg>
+			<file>nike2</file>
+			<image>24.png</image>
+		</item>
+		<item event_id="25">
+			<title>Sat.1 HD</title>
+			<epg>Sat.1</epg>
+			<file>pappkamerad10hd</file>
+			<image>sat1.png</image>
+		</item>
+		<item event_id="26">
+			<title>RTL HD</title>
+			<epg>RTL</epg>
+			<file>pappkamerad11hd</file>
+			<image>rtl.png</image>
+		</item>
+		<item event_id="27">
+			<title>RTL2 HD</title>
+			<epg>RTL II</epg>
+			<file>pappkamerad12hd</file>
+			<image>rtl2.png</image>
+		</item>
+		<item event_id="28">
 			<title>Pro7 HD</title>
 			<epg>ProSieben</epg>
-			<file>nike2</file>
+			<file>pappkamerad13hd</file>
 			<image>pro7.png</image>
+		</item>
+		<item event_id="29">
+			<title>VOX HD</title>
+			<epg>VOX</epg>
+			<file>pappkamerad14hd</file>
+			<image>vox.png</image>
 		</item>
 	</channel>
 	<channel name="Free TV Streams" image="free_tv_streams.png">

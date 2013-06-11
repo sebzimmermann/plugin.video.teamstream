@@ -18,7 +18,7 @@ __email__      = "siriuz@gmx.net"
 # constants definition #
 ########################
 PLUGINID = "plugin.video.teamstream"
-VERSION = "0.4.2"
+VERSION = "0.4.3"
 URL_BASE = "http://www.teamstream.to/"
 EPG_URL = "http://www.hoerzu.de/tv-programm/jetzt/"
 STREAM_CACHE = xbmc.translatePath( "special://home/addons/" + PLUGINID + "/resources/cache/stream.cache")
@@ -42,13 +42,14 @@ entitydict = { "E4": u"\xE4", "F6": u"\xF6", "FC": u"\xFC",
 def notify( title, message):
 	xbmc.executebuiltin("XBMC.Notification("+title+","+message+")")			
 		
-def log( msg):
+def log( msg, toXbmc=True):
 	logf = open( LOGFILE, "a")
 	logf.write( "%s: " % datetime.datetime.now().strftime( "%Y-%m-%d %I:%M:%S"))
 	try:
 		#msg = msg.encode( "latin-1")
 		logf.write( msg)
-		xbmc.log("### teamstream.to: %s" % msg, level=xbmc.LOGNOTICE)
+		if toXbmc:
+			xbmc.log("### teamstream.to: %s" % msg, level=xbmc.LOGNOTICE)
 	except:
 		logf.write( "Logging Fehler")
 	
@@ -237,8 +238,11 @@ def getLink():
 	html = BeautifulSoup( html)
 	for link in html.findAll("a"):
 		cmp = link.text
-		if cmp == "TS  Stream  -  Box" or cmp == "TS Stream  Box":
+		if "TS" in cmp and "Stream" in cmp and "Box" in cmp:
 			return link["href"]
+		else:
+			log("Can't find Stream Box Link in forum.php")
+			log("Debug HTML: " + str(html.prettify), False)
 
 def getChannelListEPG():
 	channel_list = []
@@ -250,7 +254,7 @@ def getChannelListEPG():
 		channels = div.findAll("ul", {"class":"tvshows"})
 		for channel in channels:
 			try:
-				log("Scanning Channel")
+				#log("Scanning Channel")
 				channel_name = channel.parent.findAll("div", {"class":"channel"})[0].string
 				current_show =  channel.find("b", {"class":"title"}).string
 				etime = channel.findAll("span", {"class":"starttime"})[1].string
@@ -374,7 +378,7 @@ def showMain():
 	
 
 def showChannel(channel):
-	log ( "Entering showChannel(): " + channel)
+	#log ( "Entering showChannel(): " + channel)
 	channel = channel.replace("+", " ")
 	if settings.getSetting( id="epg") == "true":
 		channel_list = getChannelListEPG()

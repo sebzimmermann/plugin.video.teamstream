@@ -1,4 +1,7 @@
-﻿Version 0.4.2 - 06/10/2013
+﻿Version 0.4.3 - 06/11/2013
+  * getLink()-Bugfix finally? :P
+
+Version 0.4.2 - 06/10/2013
   * getLink()-Bugfix
 
 Version 0.4.1 - 06/10/2013

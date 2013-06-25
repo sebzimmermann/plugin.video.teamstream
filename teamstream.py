@@ -9,27 +9,24 @@ import cPickle as pickle
 import time
 from BeautifulSoup import BeautifulSoup
 
-__author__     = "siriuz"
-__copyright__  = "Copyright 2013, teamstream.to"
-__maintainer__ = "siriuz"
-__email__      = "siriuz@gmx.net"
-
 ########################
 # constants definition #
 ########################
-PLUGINID = "plugin.video.teamstream"
-VERSION = "0.4.3"
-URL_BASE = "http://www.teamstream.to/"
-EPG_URL = "http://www.hoerzu.de/tv-programm/jetzt/"
-STREAM_CACHE = xbmc.translatePath( "special://home/addons/" + PLUGINID + "/resources/cache/stream.cache")
-EVENTPLAN_CACHE = xbmc.translatePath( "special://home/addons/" + PLUGINID + "/resources/cache/eventplan.cache")
-STREAMS_FILE = xbmc.translatePath( "special://home/addons/" + PLUGINID + "/resources/streams.xml")
-LOGFILE =  xbmc.translatePath( "special://home/addons/" + PLUGINID + "/resources/teamstream.log")
-IMG_PATH = xbmc.translatePath( "special://home/addons/" + PLUGINID + "/resources/images/")
+addon = xbmcaddon.Addon( "plugin.video.teamstream")
 
+version 	= addon.getAddonInfo('version')
+addon_path 	= addon.getAddonInfo('path')
+
+URL_BASE 	= "http://www.teamstream.to/"
+EPG_URL		= "http://www.hoerzu.de/tv-programm/jetzt/"
+
+STREAM_CACHE 	= os.path.join(addon_path, 'resources', 'cache', 'stream.cache')
+EVENTPLAN_CACHE = os.path.join(addon_path, 'resources', 'cache', 'eventplan.cache')
+STREAMS_FILE 	= os.path.join(addon_path, 'resources', 'streams.xml')
+LOGFILE 		= os.path.join(addon_path, 'resources', 'teamstream.log')
+IMG_PATH 		= os.path.join(addon_path, 'resources', 'images')
 
 pluginhandle = int(sys.argv[1])
-settings = xbmcaddon.Addon( id=PLUGINID)
 
 entitydict = { "E4": u"\xE4", "F6": u"\xF6", "FC": u"\xFC",
                "C4": u"\xE4", "D6": u"\xF6", "DC": u"\xDC",
@@ -116,8 +113,8 @@ def login():
 	hsh1 = m.group(1) + m.group(2)
 	sitechrx = hsh1 + hsh2
 	
-	login = settings.getSetting( id="login")
-	password = settings.getSetting( id="password")
+	login = addon.getSetting( id="login")
+	password = addon.getSetting( id="password")
 	
 	if (login == "" or password == ""):
 		error = "Username und/oder Passwort nicht gesetzt"
@@ -213,8 +210,8 @@ def getStreamparams(force=False):
 					log("Streamcontainer nicht gefunden (Versuch %s/10)" % i)
 					
 			if streamcontainer is None:
-				notify("Streamcontainer konnte nicht gefunden werden!")
-				return false
+				notify("TS Website Fehler", "Streamcontainer konnte nicht gefunden werden!")
+				sys.exit()
 			else:		
 				flv = streamcontainer.find("embed")["src"]
 				flashvars =streamcontainer.find("embed")["flashvars"]
@@ -236,13 +233,15 @@ def getLink():
 	url = URL_BASE + "forum.php"	
 	html = fetchHttp( url, post=False)
 	html = BeautifulSoup( html)
+	link_found = False
 	for link in html.findAll("a"):
 		cmp = link.text
 		if "TS" in cmp and "Stream" in cmp and "Box" in cmp:
+			link_found = True
 			return link["href"]
-		else:
-			log("Can't find Stream Box Link in forum.php")
-			log("Debug HTML: " + str(html.prettify), False)
+		
+	log("Can't find Stream Box Link in forum.php")
+	log("Debug HTML: " + str(html.prettify), False)
 
 def getChannelListEPG():
 	channel_list = []
@@ -380,12 +379,12 @@ def showMain():
 def showChannel(channel):
 	#log ( "Entering showChannel(): " + channel)
 	channel = channel.replace("+", " ")
-	if settings.getSetting( id="epg") == "true":
+	if addon.getSetting( id="epg") == "true":
 		channel_list = getChannelListEPG()
 	
 	for item in getChannelItems(channel):
 		name = item["title"]
-		if item['epg'] is not None and settings.getSetting( id="epg") == "true":
+		if item['epg'] is not None and addon.getSetting( id="epg") == "true":
 			epg = getEPG( item['epg'], channel_list)
 			if epg != "":
 				title = name + " - " + epg
@@ -421,10 +420,10 @@ def showEventDay(day):
 		log( html)
 
 	html = getEventPlan()
-	events = getEventsPerDay(day, html)
+	events = getEventsPerDay(day, html) 
 	if events:
 		for event in events:
-			title = name = event["start_time"] + " - " + event["name"]
+			title = name = event["start_time"] + " - " + event["name"] + " ("  + event["station_id"] + ")"
 			img = getImage( event["img"])
 			playpath = getPlayPath( event["station_id"] )
 			
@@ -466,7 +465,8 @@ mode = params.get("mode", "0")
 # depending on the mode, call the appropriate function to build the UI.
 if not sys.argv[2]:
 	# new start
-	log( "v"+VERSION)
+	os.remove(LOGFILE)
+	log( "v"+version)
 	ok = showMain()
 
 elif mode == "channel":

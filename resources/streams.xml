@@ -141,7 +141,7 @@
 		<item event_id="22">
 			<title>Sky Sport News HD</title>
 			<epg>Sky Sport News HD</epg>
-			<file>f12012hd</file>
+			<file>pappkamerad10hd</file>
 			<image>22.png</image>
 		</item>
 		<item event_id="23">
@@ -156,38 +156,40 @@
 			<file>nike2</file>
 			<image>24.png</image>
 		</item>
-		<item event_id="25">
+	</channel>
+	<channel name="Free TV Streams HD" image="free_tv_streams_hd.png">
+		<item>
 			<title>Sat.1 HD</title>
 			<epg>Sat.1</epg>
-			<file>pappkamerad10hd</file>
+			<file>pappkamerad11hd</file>
 			<image>sat1.png</image>
 		</item>
-		<item event_id="26">
-			<title>RTL HD</title>
-			<epg>RTL</epg>
-			<file>pappkamerad11hd</file>
-			<image>rtl.png</image>
-		</item>
-		<item event_id="27">
-			<title>RTL2 HD</title>
-			<epg>RTL II</epg>
-			<file>pappkamerad12hd</file>
-			<image>rtl2.png</image>
-		</item>
-		<item event_id="28">
+		<item>
 			<title>Pro7 HD</title>
 			<epg>ProSieben</epg>
-			<file>pappkamerad13hd</file>
+			<file>pappkamerad12hd</file>
 			<image>pro7.png</image>
 		</item>
-		<item event_id="29">
+		<item>
 			<title>VOX HD</title>
 			<epg>VOX</epg>
-			<file>pappkamerad14hd</file>
+			<file>pappkamerad13hd</file>
 			<image>vox.png</image>
 		</item>
-	</channel>
-	<channel name="Free TV Streams" image="free_tv_streams.png">
+		<item>
+			<title>RTL HD</title>
+			<epg>RTL</epg>
+			<file>pappkamerad14hd</file>
+			<image>rtl.png</image>
+		</item>
+		<item>
+			<title>RTL2 HD</title>
+			<epg>RTL II</epg>
+			<file>prime1hd</file>
+			<image>rtl2.png</image>
+		</item>
+	</channel
+	<channel name="Free TV Streams HD" image="free_tv_streams.png">
 		<item>
 			<title>ARD</title>
 			<epg>Das Erste</epg>

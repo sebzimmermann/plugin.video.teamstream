@@ -1,12 +1,16 @@
-﻿Version 0.4.3 - 06/11/2013
-  * getLink()-Bugfix finally? :P
+﻿Version 0.4.4 - 06/25/2013
+  * Streamreinfolge angepasst
+  * kleinere Verbesserungen
+
+Version 0.4.3 - 06/11/2013
+  * getLink()-Fix nochmal:P
 
 Version 0.4.2 - 06/10/2013
-  * getLink()-Bugfix
+  * getLink()-Fix
 
 Version 0.4.1 - 06/10/2013
-  * added new streams
-  * minor fixes
+  * neue Streams hinzugefügt
+  * kleinere Verbesserungen
 
 version 0.4.0 - 05/12/2013
   * lxml komplett ersetzt durch BeautifulSoup:

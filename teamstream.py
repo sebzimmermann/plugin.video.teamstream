@@ -233,11 +233,9 @@ def getLink():
 	url = URL_BASE + "forum.php"	
 	html = fetchHttp( url, post=False)
 	html = BeautifulSoup( html)
-	link_found = False
 	for link in html.findAll("a"):
 		cmp = link.text
 		if "TS" in cmp and "Stream" in cmp and "Box" in cmp:
-			link_found = True
 			return link["href"]
 		
 	log("Can't find Stream Box Link in forum.php")

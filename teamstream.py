@@ -460,10 +460,9 @@ def addDirectoryItem( name, params={}, image="", total=0, folder=False):
 params = parameters_string_to_dict(sys.argv[2])
 mode = params.get("mode", "0")
 
-# depending on the mode, call the appropriate function to build the UI.
 if not sys.argv[2]:
-	# new start
-	os.remove(LOGFILE)
+	if os.path.exists(LOGFILE):
+		os.remove(LOGFILE)
 	log( "v"+version)
 	ok = showMain()
 

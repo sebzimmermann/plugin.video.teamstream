@@ -1,4 +1,4 @@
-﻿Version 0.4.6 - 06/25/2013
+﻿Version 0.4.7 - 06/25/2013
   * Streamreinfolge angepasst
   * kleinere Verbesserungen
 

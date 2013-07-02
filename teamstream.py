@@ -313,7 +313,7 @@ def getEventRows(table):
 	
 
 def downloadImage(url, img):
-	img = IMG_PATH + img
+	img = os.path.join(IMG_PATH, img)
 	if not os.path.exists(img):
 		try:
 			response = urllib2.urlopen(url)

@@ -1,4 +1,7 @@
-﻿version 0.4.8 - 07/01/2013
+﻿version 0.4.9 - 07/02/2013
+  * Anpassungen wegen Serverumzug
+
+version 0.4.8 - 07/01/2013
   * Streambelegung geändert
 
 Version 0.4.7 - 06/25/2013

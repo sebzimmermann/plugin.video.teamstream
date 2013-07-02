@@ -101,6 +101,8 @@ def login():
 	urllib2.install_opener( opener)
 	
 	log( "Logging in ...")
+
+	'''
 	html = fetchHttp( URL_BASE )
 	
 	js_url = BeautifulSoup( html)
@@ -112,6 +114,7 @@ def login():
 	m = re.search(".*scf\('(.*)'\+'(.*)',.*", html)
 	hsh1 = m.group(1) + m.group(2)
 	sitechrx = hsh1 + hsh2
+	'''
 	
 	login = addon.getSetting( id="login")
 	password = addon.getSetting( id="password")
@@ -131,8 +134,8 @@ def login():
 				"url": "/forum.php",
 				"do": "login"}
 	
-	cookie = cookielib.Cookie(version=0, name='sitechrx', value=sitechrx, port=None, port_specified=False, domain='www.teamstream.to', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={'HttpOnly': None}, rfc2109=False)
-	cookies.set_cookie(cookie)	
+	#cookie = cookielib.Cookie(version=0, name='sitechrx', value=sitechrx, port=None, port_specified=False, domain='www.teamstream.to', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={'HttpOnly': None}, rfc2109=False)
+	#cookies.set_cookie(cookie)	
 	reply = fetchHttp( url, args, post=True);
 	
 	if not "deine Anmeldung" in reply:
@@ -182,7 +185,7 @@ def getChannelItems(chan):
 			return items
 
 def getImage(image):
-	image = IMG_PATH + image
+	image = os.path.join(IMG_PATH, image)
 	if os.path.exists(image):
 		return image
 	else:

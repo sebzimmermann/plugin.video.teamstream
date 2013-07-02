@@ -1,24 +1,27 @@
 <xml>
 	<channel name="Sky Streams" image="sky_streams.png">
+	
 		<item event_id="1">
-			<title>Sky Sport HD1</title>
+			<title>Sky Bundesliga HD1</title>
 			<epg>Sky Sport HD 1</epg>
 			<file>pappkamerad1hd</file>
 			<image>01.png</image>
 		</item>
+		
 		<item event_id="2">
-			<title>Sky Sport HD2</title>
-			<epg>Sky Sport HD 2</epg>
+			<title>Sky Sport HD1</title>
+			<epg>Sky Sport HD 1</epg>
 			<file>pappkamerad2hd</file>
 			<image>02.png</image>
 		</item>
+		
 		<item event_id="3">
-			<title>Sky Sport HD EXTRA</title>
-			<epg>Sky Sport HD Extra</epg>
+			<title>Sky Sport HD2</title>
+			<epg>Sky Sport HD 2</epg>
 			<file>pappkamerad3hd</file>
 			<image>03.png</image>
 		</item>
-
+		
 		<item event_id="4">
 			<title>History HD</title>
 			<epg>History</epg>
@@ -102,60 +105,63 @@
 			<file>peppi4hd</file>
 			<image>15.png</image>
 		</item>
+		
 		<item event_id="16">
 			<title>Nat Geo Wild</title>
 			<epg>Nat Geo Wild</epg>
 			<file>peppi5hd</file>
 			<image>16.png</image>
 		</item>
+		
 		<item event_id="17">
-			<title>FOX HD</title>
-			<epg>FOX</epg>
+			<title>Sky Comedy</title>
+			<epg>Sky Comedy</epg>
 			<file>peppi6hd</file>
 			<image>17.png</image>
 		</item>
+		
 		<item event_id="18">
 			<title>TNT Serie HD</title>
 			<epg>TNT Serie</epg>
 			<file>peppi7hd</file>
 			<image>18.png</image>
 		</item>
+		
 		<item event_id="19">
 			<title>13th Street HD</title>
 			<epg>13TH STREET Universal</epg>
 			<file>peppi8hd</file>
 			<image>19.png</image>
 		</item>
+		
 		<item event_id="20">
 			<title>Sport 1+ HD</title>
 			<epg>SPORT1+</epg>
 			<file>peppi9hd</file>
 			<image>20.png</image>
 		</item>
+		
 		<item event_id="21">
-			<title>Sky Comedy</title>
-			<epg>Sky Comedy</epg>
+			<title>Eurosport 2</title>
+			<epg>Eurosport 2</epg>
 			<file>nike</file>
 			<image>21.png</image>
 		</item>
+		
 		<item event_id="22">
 			<title>Sky Sport News HD</title>
 			<epg>Sky Sport News HD</epg>
 			<file>pappkamerad10hd</file>
 			<image>22.png</image>
 		</item>
+		
 		<item event_id="23">
 			<title>Disney Channel</title>
 			<epg>Disney Channel</epg>
-			<file>prime1</file>
+			<file>f12012</file>
 			<image>23.png</image>
 		</item>
-		<item event_id="24">
-			<title>Eurosport 2</title>
-			<epg>Eurosport 2</epg>
-			<file>nike2</file>
-			<image>24.png</image>
-		</item>
+		
 	</channel>
 	<channel name="Free TV Streams HD" image="free_tv_streams_hd.png">
 		<item>
@@ -185,7 +191,7 @@
 		<item>
 			<title>RTL2 HD</title>
 			<epg>RTL II</epg>
-			<file>prime1hd</file>
+			<file>nike2</file>
 			<image>rtl2.png</image>
 		</item>
 	</channel

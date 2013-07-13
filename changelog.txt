@@ -1,4 +1,7 @@
-﻿version 0.4.9 - 07/02/2013
+﻿version 0.4.10 - 07/14/2013
+  * Security Cookie Fehler behoben
+
+version 0.4.9 - 07/02/2013
   * Anpassungen wegen Serverumzug
 
 version 0.4.8 - 07/01/2013

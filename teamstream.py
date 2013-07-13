@@ -102,19 +102,21 @@ def login():
 	
 	log( "Logging in ...")
 
-	'''
 	html = fetchHttp( URL_BASE )
 	
-	js_url = BeautifulSoup( html)
-	js_url = js_url.find("script")['src']
-	js_url = URL_BASE + js_url
-	js = fetchHttp( js_url, hdrs = { "Referer": "http://www.teamstream.to/" })
-	m = re.search(".*\"(.*)\"\).*", js)
-	hsh2 = m.group(1)
-	m = re.search(".*scf\('(.*)'\+'(.*)',.*", html)
-	hsh1 = m.group(1) + m.group(2)
-	sitechrx = hsh1 + hsh2
-	'''
+	if "scf(" in html:
+		log("Getting security cookie ...")
+		js_url = BeautifulSoup( html)
+		js_url = js_url.find("script")['src']
+		js_url = URL_BASE + js_url
+		js = fetchHttp( js_url, hdrs = { "Referer": "http://www.teamstream.to/" })
+		m = re.search(".*\"(.*)\"\).*", js)
+		hsh2 = m.group(1)
+		m = re.search(".*scf\('(.*)'\+'(.*)',.*", html)
+		hsh1 = m.group(1) + m.group(2)
+		sitechrx = hsh1 + hsh2
+		cookie = cookielib.Cookie(version=0, name='sitechrx', value=sitechrx, port=None, port_specified=False, domain='www.teamstream.to', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={'HttpOnly': None}, rfc2109=False)
+		cookies.set_cookie(cookie)	
 	
 	login = addon.getSetting( id="login")
 	password = addon.getSetting( id="password")
@@ -133,9 +135,7 @@ def login():
 				"securitytoken:": "guest",
 				"url": "/forum.php",
 				"do": "login"}
-	
-	#cookie = cookielib.Cookie(version=0, name='sitechrx', value=sitechrx, port=None, port_specified=False, domain='www.teamstream.to', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={'HttpOnly': None}, rfc2109=False)
-	#cookies.set_cookie(cookie)	
+				
 	reply = fetchHttp( url, args, post=True);
 	
 	if not "deine Anmeldung" in reply:

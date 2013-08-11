@@ -20,7 +20,7 @@ addon_path 	= addon.getAddonInfo('path')
 URL_BASE 	= "http://www.teamstream.to/"
 EPG_URL		= "http://www.hoerzu.de/tv-programm/jetzt/"
 
-TMP_DIR 		= os.path.join(xbmc.translatePath("special://temp"), 'teamstream')
+TMP_DIR 		= os.path.join(xbmc.translatePath("special://temp"), 'teamstream').decode('utf-8')
 STREAM_CACHE 	= os.path.join(TMP_DIR, 'stream.cache')
 EVENTPLAN_CACHE = os.path.join(TMP_DIR, 'eventplan.cache')
 

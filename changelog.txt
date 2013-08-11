@@ -1,4 +1,7 @@
-﻿Version 0.4.11 - 08/11/2013
+﻿Version 0.4.12 - 08/12/2013
+  * Fix für Fehler bei Sonderzeichen in Windows Accountname
+
+Version 0.4.11 - 08/11/2013
   * temp-Verzeichnis zu special://temp gewechselt
   * logging nur noch ins xbmc.log
 

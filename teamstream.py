@@ -20,10 +20,11 @@ addon_path 	= addon.getAddonInfo('path')
 URL_BASE 	= "http://www.teamstream.to/"
 EPG_URL		= "http://www.hoerzu.de/tv-programm/jetzt/"
 
-STREAM_CACHE 	= os.path.join(addon_path, 'resources', 'cache', 'stream.cache')
-EVENTPLAN_CACHE = os.path.join(addon_path, 'resources', 'cache', 'eventplan.cache')
+TMP_DIR 		= os.path.join(xbmc.translatePath("special://temp"), 'teamstream')
+STREAM_CACHE 	= os.path.join(TMP_DIR, 'stream.cache')
+EVENTPLAN_CACHE = os.path.join(TMP_DIR, 'eventplan.cache')
+
 STREAMS_FILE 	= os.path.join(addon_path, 'resources', 'streams.xml')
-LOGFILE 		= os.path.join(addon_path, 'resources', 'teamstream.log')
 IMG_PATH 		= os.path.join(addon_path, 'resources', 'images')
 
 pluginhandle = int(sys.argv[1])
@@ -39,21 +40,8 @@ entitydict = { "E4": u"\xE4", "F6": u"\xF6", "FC": u"\xFC",
 def notify( title, message):
 	xbmc.executebuiltin("XBMC.Notification("+title+","+message+")")			
 		
-def log( msg, toXbmc=True):
-	logf = open( LOGFILE, "a")
-	logf.write( "%s: " % datetime.datetime.now().strftime( "%Y-%m-%d %I:%M:%S"))
-	try:
-		#msg = msg.encode( "latin-1")
-		logf.write( msg)
-		if toXbmc:
-			xbmc.log("### teamstream.to: %s" % msg, level=xbmc.LOGNOTICE)
-	except:
-		logf.write( "Logging Fehler")
-	
-	logf.write( '\n')
-	logf.close()
-	logf.close()
-	
+def log( msg):
+	xbmc.log("### teamstream.to: %s" % msg, level=xbmc.LOGNOTICE)
 	
 def fetchHttp( url, args={}, hdrs={}, post=False):
 	#log( "fetchHttp(%s): %s" % ("POST" if post else "GET", url))
@@ -125,6 +113,7 @@ def login():
 		error = "Username und/oder Passwort nicht gesetzt"
 		log( "Login fehlgeschlagen:: " + error)
 		notify( "Login fehlgeschlagen!", "Fehler: " + error)
+		addon.openSettings()
 		xbmcplugin.endOfDirectory( handle=pluginhandle, succeeded=False)
 		return False	
 	
@@ -149,6 +138,7 @@ def login():
 		elif "Login failed" in reply:
 			error = "Username / Password stimmen nicht ueberein"
 			log( "Login fehlgeschlagen: " + error)
+			addon.openSettings()
 		else:
 			error = "Unbekannter Fehler"
 			log( "Login fehlgeschlagen: " + error)	
@@ -242,7 +232,7 @@ def getLink():
 			return link["href"]
 		
 	log("Can't find Stream Box Link in forum.php")
-	log("Debug HTML: " + str(html.prettify), False)
+	log("Debug HTML: " + str(html.prettify))
 
 def getChannelListEPG():
 	channel_list = []
@@ -464,8 +454,8 @@ params = parameters_string_to_dict(sys.argv[2])
 mode = params.get("mode", "0")
 
 if not sys.argv[2]:
-	if os.path.exists(LOGFILE):
-		os.remove(LOGFILE)
+	if not os.path.exists(TMP_DIR):
+		os.makedirs(TMP_DIR)
 	log( "v"+version)
 	ok = showMain()
 

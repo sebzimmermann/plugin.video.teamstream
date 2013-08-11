@@ -1,4 +1,8 @@
-﻿version 0.4.10 - 07/14/2013
+﻿Version 0.4.11 - 08/11/2013
+  * temp-Verzeichnis zu special://temp gewechselt
+  * logging nur noch ins xbmc.log
+
+version 0.4.10 - 07/14/2013
   * Security Cookie Fehler behoben
 
 version 0.4.9 - 07/02/2013

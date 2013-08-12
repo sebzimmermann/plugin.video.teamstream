@@ -24,8 +24,8 @@ TMP_DIR 		= os.path.join(xbmc.translatePath("special://temp"), 'teamstream').dec
 STREAM_CACHE 	= os.path.join(TMP_DIR, 'stream.cache')
 EVENTPLAN_CACHE = os.path.join(TMP_DIR, 'eventplan.cache')
 
-STREAMS_FILE 	= os.path.join(addon_path, 'resources', 'streams.xml')
-IMG_PATH 		= os.path.join(addon_path, 'resources', 'images')
+STREAMS_FILE 	= os.path.join(addon_path, 'resources', 'streams.xml').decode('utf-8')
+IMG_PATH 		= os.path.join(addon_path, 'resources', 'images').decode('utf-8')
 
 pluginhandle = int(sys.argv[1])
 

@@ -1,4 +1,8 @@
-﻿Version 0.4.12 - 08/12/2013
+﻿Version 0.4.13 - 08/12/2013
+  * Streamanpassungen
+  * Sonderzeichen-Bug fix #2
+
+Version 0.4.12 - 08/12/2013
   * Fix für Fehler bei Sonderzeichen in Windows Accountname
 
 Version 0.4.11 - 08/11/2013

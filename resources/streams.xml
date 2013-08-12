@@ -51,8 +51,8 @@
 		</item>
 
 		<item event_id="8">
-			<title>ESPN America HD</title>
-			<epg>ESPN America</epg>
+			<title>Sport1 US HD</title>
+			<epg></epg>
 			<file>pappkamerad8hd</file>
 			<image>08.png</image>
 		</item>
@@ -129,7 +129,7 @@
 		
 		<item event_id="19">
 			<title>13th Street HD</title>
-			<epg>13TH STREET Universal</epg>
+			<epg>13TH STREET</epg>
 			<file>peppi8hd</file>
 			<image>19.png</image>
 		</item>
@@ -161,40 +161,7 @@
 			<file>f12012</file>
 			<image>23.png</image>
 		</item>
-		
 	</channel>
-	<channel name="Free TV Streams HD" image="free_tv_streams_hd.png">
-		<item>
-			<title>Sat.1 HD</title>
-			<epg>Sat.1</epg>
-			<file>pappkamerad11hd</file>
-			<image>sat1.png</image>
-		</item>
-		<item>
-			<title>Pro7 HD</title>
-			<epg>ProSieben</epg>
-			<file>pappkamerad12hd</file>
-			<image>pro7.png</image>
-		</item>
-		<item>
-			<title>VOX HD</title>
-			<epg>VOX</epg>
-			<file>pappkamerad13hd</file>
-			<image>vox.png</image>
-		</item>
-		<item>
-			<title>RTL HD</title>
-			<epg>RTL</epg>
-			<file>pappkamerad14hd</file>
-			<image>rtl.png</image>
-		</item>
-		<item>
-			<title>RTL2 HD</title>
-			<epg>RTL II</epg>
-			<file>nike2</file>
-			<image>rtl2.png</image>
-		</item>
-	</channel
 	<channel name="Free TV Streams SD" image="free_tv_streams.png">
 		<item>
 			<title>ARD</title>

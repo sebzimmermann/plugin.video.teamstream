@@ -162,7 +162,7 @@
 			<image>23.png</image>
 		</item>
 	</channel>
-	<channel name="Free TV Streams SD" image="free_tv_streams.png">
+	<channel name="Free TV Streams" image="free_tv_streams.png">
 		<item>
 			<title>ARD</title>
 			<epg>Das Erste</epg>

@@ -3,7 +3,7 @@
 	
 		<item event_id="1">
 			<title>Sky Bundesliga HD1</title>
-			<epg>Sky Sport HD 1</epg>
+			<epg>Sky Bundesliga</epg>
 			<file>pappkamerad1hd</file>
 			<image>01.png</image>
 		</item>
@@ -154,11 +154,40 @@
 			<file>pappkamerad10hd</file>
 			<image>22.png</image>
 		</item>
-		
 		<item event_id="23">
 			<title>Disney Channel</title>
 			<epg>Disney Channel</epg>
 			<file>f12012</file>
+			<image>23.png</image>
+		</item>
+                <item event_id="24">
+			<title>FOX HD</title>
+			<epg>FOX</epg>
+			<file>pappkamerad11hd</file>
+			<image>23.png</image>
+		</item>    
+                <item event_id="25">
+			<title>Kinowelt TV</title>
+			<epg>Kinowelt TV</epg>
+			<file>pappkamerad12hd</file>
+			<image>23.png</image>
+		</item>   
+                <item event_id="26">
+			<title>TNT Film</title>
+			<epg>TNT Film</epg>
+			<file>pappkamerad13hd</file>
+			<image>23.png</image>
+		</item>
+                <item event_id="27">
+			<title>RTL HD</title>
+			<epg>RTL</epg>
+			<file>pappkamerad14hd</file>
+			<image>23.png</image>
+		</item>
+                <item event_id="28">
+			<title>RTL2 HD</title>
+			<epg>RTL II</epg>
+			<file>nike2</file>
 			<image>23.png</image>
 		</item>
 	</channel>

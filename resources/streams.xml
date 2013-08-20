@@ -154,46 +154,58 @@
 			<file>pappkamerad10hd</file>
 			<image>22.png</image>
 		</item>
+		
 		<item event_id="23">
 			<title>Disney Channel</title>
 			<epg>Disney Channel</epg>
 			<file>f12012</file>
 			<image>23.png</image>
 		</item>
-                <item event_id="24">
+		
+		<item event_id="24">
 			<title>FOX HD</title>
 			<epg>FOX</epg>
 			<file>pappkamerad11hd</file>
-			<image>23.png</image>
-		</item>    
-                <item event_id="25">
+			<image>24.png</image>
+		</item>
+		
+		<item event_id="25">
 			<title>Kinowelt TV</title>
 			<epg>Kinowelt TV</epg>
 			<file>pappkamerad12hd</file>
-			<image>23.png</image>
-		</item>   
-                <item event_id="26">
+			<image>25.png</image>
+		</item>  
+		
+		<item event_id="26">
 			<title>TNT Film</title>
 			<epg>TNT Film</epg>
 			<file>pappkamerad13hd</file>
-			<image>23.png</image>
+			<image>26.png</image>
 		</item>
-                <item event_id="27">
-			<title>RTL HD</title>
-			<epg>RTL</epg>
+		
+		<item event_id="27">
+			<title>AXN HD</title>
+			<epg>AXN</epg>
 			<file>pappkamerad14hd</file>
-			<image>23.png</image>
+			<image>27.png</image>
 		</item>
-                <item event_id="28">
-			<title>RTL2 HD</title>
-			<epg>RTL II</epg>
+
+		<item event_id="28">
+			<title>Spiegel Geschichte</title>
+			<epg>Spiegel Geschichte</epg>
 			<file>nike2</file>
-			<image>23.png</image>
+			<image>28.png</image>
 		</item>
 	</channel>
 	<channel name="Free TV Streams" image="free_tv_streams.png">
 		<item>
 			<title>ARD</title>
+			<epg>Das Erste</epg>
+			<file>ard</file>
+			<image>ard.png</image>
+		</item>
+		<item>
+			<title>ARD HD</title>
 			<epg>Das Erste</epg>
 			<file>ard</file>
 			<image>ard.png</image>
@@ -205,10 +217,10 @@
 			<image>zdf.png</image>
 		</item>
 		<item>
-			<title>MDR</title>
-			<epg>MDR</epg>
-			<file>mdr</file>
-			<image>mdr.png</image>
+			<title>ZDF HD</title>
+			<epg>ZDF</epg>
+			<file>zdf</file>
+			<image>zdf.png</image>
 		</item>
 		<item>
 			<title>RTL</title>
@@ -217,22 +229,16 @@
 			<image>rtl.png</image>
 		</item>
 		<item>
-			<title>SAT.1</title>
-			<epg>Sat.1</epg>
-			<file>sat.1ch</file>
-			<image>sat1.png</image>
-		</item>
-		<item>
 			<title>PRO 7</title>
 			<epg>ProSieben</epg>
 			<file>pro7</file>
 			<image>pro7.png</image>
 		</item>
 		<item>
-			<title>Kabel 1</title>
-			<epg>kabel eins</epg>
-			<file>kabel1</file>
-			<image>kabel_1.png</image>
+			<title>SAT.1</title>
+			<epg>Sat.1</epg>
+			<file>sat.1ch</file>
+			<image>sat1.png</image>
 		</item>
 		<item>
 			<title>RTL 2</title>
@@ -247,28 +253,22 @@
 			<image>super_rtl.png</image>
 		</item>
 		<item>
-			<title>VIVA</title>
-			<epg>VIVA</epg>
-			<file>viva</file>
-			<image>viva.png</image>
-		</item>
-		<item>
-			<title>Das Vierte</title>
-			<epg>Das VIERTE</epg>
-			<file>dasvierte</file>
-			<image>das_vierte.png</image>
-		</item>
-		<item>
-			<title>Arte</title>
-			<epg>Arte</epg>
-			<file>arte</file>
-			<image>arte.png</image>
-		</item>
-		<item>
 			<title>VOX</title>
 			<epg>VOX</epg>
 			<file>vox</file>
 			<image>vox.png</image>
+		</item>
+		<item>
+			<title>Kabel 1</title>
+			<epg>kabel eins</epg>
+			<file>kabel1</file>
+			<image>kabel_1.png</image>
+		</item>	
+		<item>
+			<title>SIXX</title>
+			<epg>Sixx</epg>
+			<file>sixx</file>
+			<image>sixx.png</image>
 		</item>
 		<item event_id="Sport 1">
 			<title>Sport 1</title>
@@ -289,37 +289,25 @@
 			<image>eurosport.png</image>
 		</item>
 		<item>
-			<title>WDR</title>
-			<epg>WDR</epg>
-			<file>wdr</file>
-			<image>wdr.png</image>
+			<title>Nick/CC</title>
+			<epg>Nickelodeon / Comedy Central</epg>
+			<file>nick</file>
+			<image>nick_cc.png</image>
 		</item>
 		<item>
-			<title>NDR</title>
-			<epg>NDR</epg>
-			<file>ndr</file>
-			<image>ndr.png</image>
-		</item>
-		<item>
-			<title>SWR</title>
-			<epg>SWR</epg>
-			<file>swrbw</file>
-			<image>swr.png</image>
-		</item>
-		<item>
-			<title>NTV</title>
-			<epg>n-tv</epg>
-			<file>n-tv</file>
-			<image>ntv.png</image>
-		</item>
-		<item>
-			<title>3sat</title>
-			<epg>3sat</epg>
-			<file>3sat</file>
-			<image>3sat.png</image>
+			<title>RTL Nitro</title>
+			<epg>RTL NITRO</epg>
+			<file>rtlnitro</file>
+			<image>rtlnitro.png</image>
 		</item>
 		<item>
 			<title>ORF 1</title>
+			<epg>ORF eins</epg>
+			<file>orf1</file>
+			<image>orf_1.png</image>
+		</item>
+		<item>
+			<title>ORF 1 HD</title>
 			<epg>ORF eins</epg>
 			<file>orf1</file>
 			<image>orf_1.png</image>
@@ -353,42 +341,24 @@
 			<epg>3plus</epg>
 			<file>3plus</file>
 			<image>3plus.png</image>
+		</item>	
+		<item>
+			<title>MTV</title>
+			<epg>MTV</epg>
+			<file>mtv</file>
+			<image></image>
 		</item>
 		<item>
-			<title>Servus TV</title>
-			<epg>Servus TV</epg>
-			<file>servustv</file>
-			<image>servus_tv.png</image>
+			<title>VIVA</title>
+			<epg>VIVA</epg>
+			<file>viva</file>
+			<image>viva.png</image>
 		</item>
 		<item>
-			<title>BBC One</title>
-			<epg></epg>
-			<file>bbc1</file>
-			<image>bbc_one.png</image>
-		</item>
-		<item>
-			<title>BBC Two</title>
-			<epg></epg>
-			<file>bbc2</file>
-			<image>bbc_two.png</image>
-		</item>
-		<item>
-			<title>CNN</title>
-			<epg>CNN</epg>
-			<file>cnn</file>
-			<image>cnn.png</image>
-		</item>
-		<item>
-			<title>ITV 1</title>
-			<epg></epg>
-			<file>itv1</file>
-			<image>itv1.png</image>
-		</item>
-		<item>
-			<title>ITV 2</title>
-			<epg></epg>
-			<file>itv2</file>
-			<image>itv2.png</image>
+			<title>NTV</title>
+			<epg>n-tv</epg>
+			<file>n-tv</file>
+			<image>ntv.png</image>
 		</item>
 	</channel>
 </xml>

@@ -1,4 +1,7 @@
-﻿Version 0.4.14 - 08/12/2013
+﻿Version 0.4.15 - 08/20/2013
+  * Stream Update - neue TV Box
+
+Version 0.4.14 - 08/19/2013
   * Stream Update (thx to Jrgong1)
 
 Version 0.4.13 - 08/12/2013

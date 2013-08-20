@@ -207,7 +207,7 @@
 		<item>
 			<title>ARD HD</title>
 			<epg>Das Erste</epg>
-			<file>ard</file>
+			<file>ardhd</file>
 			<image>ard.png</image>
 		</item>
 		<item>
@@ -219,7 +219,7 @@
 		<item>
 			<title>ZDF HD</title>
 			<epg>ZDF</epg>
-			<file>zdf</file>
+			<file>zdfhd</file>
 			<image>zdf.png</image>
 		</item>
 		<item>
@@ -309,7 +309,7 @@
 		<item>
 			<title>ORF 1 HD</title>
 			<epg>ORF eins</epg>
-			<file>orf1</file>
+			<file>orf1hd</file>
 			<image>orf_1.png</image>
 		</item>
 		<item>
@@ -346,7 +346,7 @@
 			<title>MTV</title>
 			<epg>MTV</epg>
 			<file>mtv</file>
-			<image></image>
+			<image>mtv.png</image>
 		</item>
 		<item>
 			<title>VIVA</title>
